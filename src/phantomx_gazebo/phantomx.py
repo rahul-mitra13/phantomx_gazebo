@@ -34,12 +34,12 @@ class PhantomX:
 
         self._pub_cmd_vel = rospy.Publisher(ns + 'cmd_vel', Twist, queue_size=1)
 
-    def set_walk_velocity(self, x, y, t):
-        msg = Twist()
-        msg.linear.x = x
-        msg.linear.y = y
-        msg.angular.z = t
-        self._pub_cmd_vel.publish(msg)
+#     def set_walk_velocity(self, x, y, t):
+#         msg = Twist()
+#         msg.linear.x = x
+#         msg.linear.y = y
+#         msg.angular.z = t
+#         self._pub_cmd_vel.publish(msg)
 
     def _cb_joints(self, msg):
         if self.joints is None:
